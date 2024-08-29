@@ -37617,7 +37617,7 @@ const oM = [
     {
       id: 0,
       name: "Project Hub",
-      description: "Coffee Shop Website",
+      description: "Project Hub is a UI-based platform developed as a 2nd-semester project to enable students to share their projects.",
       image: "images/projects/projecthub.png",
       tags: ["javascript", "html", "css", "ui"],
       liveview: "https://projecthubb.vercel.app/",
@@ -37627,7 +37627,7 @@ const oM = [
     {
       id: 1,
       name: "krushigram",
-      description: "Coffee Shop Website",
+      description: "Krushigram is an e-commerce platform for farmers, developed during a hackathon at DA-IICT.It aims to empower farmers through fair trade.",
       image: "images/projects/krushigram.png",
       tags: ["javascript", "html", "css", "ui"],
       liveview: "https://krushigram.vercel.app/",
@@ -37637,7 +37637,7 @@ const oM = [
     {
       id: 2,
       name: "Study Buddy",
-      description: "LMS for teaching assistant",
+      description: "Study Buddy is an LMS developed for teaching assistants at my university to provide lab solutions, manage materials, and support students.",
       image: "images/projects/studybuddy.jpeg",
       tags: ["javascript", "react", "mongodb", "express"],
       liveview: "https://studybuddyy.vercel.app/",
@@ -37647,7 +37647,7 @@ const oM = [
     {
       id: 3,
       name: "Open Talk",
-      description: "Affiliate Marketing and earning Website",
+      description: "Open Talk is a platform where people can share their achievements and hacks, allowing others to like or dislike them without needing an account.",
       image: "images/projects/opentalk.jpeg",
       tags: ["react", "mongodb", "express"],
       liveview: "https://opentalk1.netlify.app/",
@@ -37657,7 +37657,7 @@ const oM = [
     {
       id: 4,
       name: "Randomizer",
-      description: "Fitness Institute",
+      description: "Randomizer is a memory game developed as part of a self-imposed challenge to create a game during a long trip. ",
       image: "images/projects/randomizer.jpg",
       tags: ["html", "css", "javascript", "react", "game"],
       liveview: "https://randomizerr.vercel.app/",
@@ -37731,78 +37731,138 @@ class lM {
       t
     );
   }
+  // renderButtons(e) {
+  //   let t = "";
+  //   return (
+  //     e.github
+  //       ? (t = `
+  //               <div id="work-item-gray-button-${
+  //                 e.id
+  //               }" class="work-item-gray-button center gray-hover" ${
+  //           e.liveview ? "" : 'style="width: 100%"'
+  //         }>
+  //                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"  class="code-icon">
+  //                       <use href="#code-path"/>
+  //                   </svg>
+  //                ${e.liveview ? "" : "<span>Source Code</span>"}
+  //               </div>
+  //                ${
+  //                  e.liveview
+  //                    ? `<div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover">Live View</div>`
+  //                    : ""
+  //                }
+  //           `)
+  //       : e.twitter
+  //       ? (t = `
+  //           <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0;">
+  //               <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="24px" height="24px" style="margin-right: 5px">    
+  //                   <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/>
+  //               </svg>
+  //               Stay up to date
+  //           </div>`)
+  //       : (t = `
+  //               <div id="work-item-gray-button-${e.id}" class="work-item-gray-button center" style="width: 100%; background: #a7adb8; cursor: unset;">
+  //                   Work in progress
+  //               </div>
+  //           `),
+  //     t
+  //   );
+  // }
   renderButtons(e) {
     let t = "";
-    return (
-      e.github
-        ? (t = `
-                <div id="work-item-gray-button-${
-                  e.id
-                }" class="work-item-gray-button center gray-hover" ${
-            e.liveview ? "" : 'style="width: 100%"'
-          }>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"  class="code-icon">
-                        <use href="#code-path"/>
-                    </svg>
-                 ${e.liveview ? "" : "<span>Source Code</span>"}
-                </div>
-                 ${
-                   e.liveview
-                     ? `<div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover">Live View</div>`
-                     : ""
-                 }
-            `)
-        : e.twitter
-        ? (t = `
+    if (e.liveview) {
+        // Render only the "Live View" button if a live view link is present
+        t = `
             <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0;">
-                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="24px" height="24px" style="margin-right: 5px">    
+                Live View
+            </div>
+        `;
+    } else if (e.twitter) {
+        // Render Twitter button if a Twitter link is present
+        t = `
+            <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0;">
+                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="24px" height="24px" style="margin-right: 5px">    
                     <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/>
                 </svg>
                 Stay up to date
-            </div>`)
-        : (t = `
-                <div id="work-item-gray-button-${e.id}" class="work-item-gray-button center" style="width: 100%; background: #a7adb8; cursor: unset;">
-                    Work in progress
-                </div>
-            `),
-      t
-    );
-  }
+            </div>
+        `;
+    } else {
+        // Render a "Work in progress" button if no liveview or Twitter link is present
+        t = `
+            <div id="work-item-gray-button-${e.id}" class="work-item-gray-button center" style="width: 100%; background: #a7adb8; cursor: unset;">
+                Work in progress
+            </div>
+        `;
+    }
+    return t;
+}
+
   renderTags(e) {
     let t = "";
     for (let n = 0; n < e.length; n++) t += this.tags[e[n]];
     return t;
   }
+  // addEventListenersToCard(e) {
+  //   const t = document.getElementById("work-item-" + e.id);
+  //   t.addEventListener("click", () => {
+  //     t.classList.contains("work-inactive-item-container") &&
+  //       document
+  //         .getElementById("work-item-0")
+  //         .classList.contains("work-item-container-transition") &&
+  //       ((this.experience.ui.work.cards.currentItemIndex = -e.id + 4),
+  //       this.experience.ui.work.cards.updatePositions(),
+  //       this.sounds.play("buttonClick"));
+  //   }),
+  //     e.github
+  //       ? (document
+  //           .getElementById("work-item-gray-button-" + e.id)
+  //           .addEventListener("click", () => {
+  //             window.open(e.github, "_blank").focus();
+  //           }),
+  //         e.liveview &&
+  //           document
+  //             .getElementById("work-item-orange-button-" + e.id)
+  //             .addEventListener("click", () => {
+  //               window.open(e.liveview, "_blank").focus();
+  //             }))
+  //       : e.twitter &&
+  //         document
+  //           .getElementById("work-item-orange-button-" + e.id)
+  //           .addEventListener("click", () => {
+  //             window.open(e.twitter, "_blank").focus();
+  //           });
+  // }
   addEventListenersToCard(e) {
     const t = document.getElementById("work-item-" + e.id);
     t.addEventListener("click", () => {
-      t.classList.contains("work-inactive-item-container") &&
-        document
-          .getElementById("work-item-0")
-          .classList.contains("work-item-container-transition") &&
-        ((this.experience.ui.work.cards.currentItemIndex = -e.id + 4),
-        this.experience.ui.work.cards.updatePositions(),
-        this.sounds.play("buttonClick"));
-    }),
-      e.github
-        ? (document
-            .getElementById("work-item-gray-button-" + e.id)
-            .addEventListener("click", () => {
-              window.open(e.github, "_blank").focus();
-            }),
-          e.liveview &&
+        if (
+            t.classList.contains("work-inactive-item-container") &&
             document
-              .getElementById("work-item-orange-button-" + e.id)
-              .addEventListener("click", () => {
-                window.open(e.liveview, "_blank").focus();
-              }))
-        : e.twitter &&
-          document
+                .getElementById("work-item-0")
+                .classList.contains("work-item-container-transition")
+        ) {
+            this.experience.ui.work.cards.currentItemIndex = -e.id + 4;
+            this.experience.ui.work.cards.updatePositions();
+            this.sounds.play("buttonClick");
+        }
+    });
+
+    if (e.liveview) {
+        document
             .getElementById("work-item-orange-button-" + e.id)
             .addEventListener("click", () => {
-              window.open(e.twitter, "_blank").focus();
+                window.open(e.liveview, "_blank").focus();
             });
-  }
+    } else if (e.twitter) {
+        document
+            .getElementById("work-item-orange-button-" + e.id)
+            .addEventListener("click", () => {
+                window.open(e.twitter, "_blank").focus();
+            });
+    }
+}
+
 }
 const cM = [
   {
