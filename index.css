@@ -1258,3 +1258,12 @@ section {
     src: local(""), url(/poppins-v19-latin-700.eot?#iefix) format("embedded-opentype"), url(/poppins-v19-latin-700.woff2) format("woff2"), url(/poppins-v19-latin-700.woff) format("woff"), url(/poppins-v19-latin-700.ttf) format("truetype"), url(/poppins-v19-latin-700.svg#Poppins) format("svg");
     font-display: swap
 }
+
+.social-icon {
+    opacity: 1 !important; /* Force icons to be visible */
+    transition: transform 0.2s ease; /* Optional: smooth transform on hover */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Optional: slight scale up on hover */
+}
